@@ -29,10 +29,6 @@ namespace DKD_Sokaban {
             }
         }
 
-        public Field UpField() {
-
-        }
-
         public bool NeedsToHaveBox {
             get => default;
             set {
@@ -41,6 +37,37 @@ namespace DKD_Sokaban {
 
         public Field() {
             WalkOn = true;
+            this.NeedsToHaveBox = false;
+        }
+
+        public Character Character {
+            get => default;
+            set {
+            }
+        }
+
+        public Field Up {
+            get => default;
+            set {
+            }
+        }
+
+        public Field Down {
+            get => default;
+            set {
+            }
+        }
+
+        public Field Left {
+            get => default;
+            set {
+            }
+        }
+
+        public Field Right {
+            get => default;
+            set {
+            }
         }
     }
 }

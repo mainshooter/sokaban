@@ -5,6 +5,8 @@ using System.Text;
 
 namespace DKD_Sokaban {
     public class DestinationField : Field {
-
+        public DestinationField() {
+            this.NeedsToHaveBox = true;
+        }
     }
 }

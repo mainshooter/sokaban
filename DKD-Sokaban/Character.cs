@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace DKD_Sokaban {
-    public class Character {
+    public class Character: IWalk {
         public Field Field {
             get => default;
             set {
@@ -12,7 +12,6 @@ namespace DKD_Sokaban {
         }
 
         public void walk(string direction) {
-            throw new System.NotImplementedException();
         }
     }
 }
