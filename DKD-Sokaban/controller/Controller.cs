@@ -11,7 +11,7 @@ namespace DKD_Sokaban {
 
         }
 
-        public void start() {
+        public void Start() {
 
         }
     }
