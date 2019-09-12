@@ -5,10 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DKD_Sokaban {
-    class Program {
-        static void Main(string[] args) {
-            Controller controller = new Controller();
-            controller.Start();
+    class Controller {
+
+        public Controller () {
+
+        }
+
+        public void start() {
+
         }
     }
 }
