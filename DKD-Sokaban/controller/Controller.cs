@@ -20,5 +20,9 @@ namespace DKD_Sokaban {
             Game = new Game();
             Game.Parse(index);
         }
+
+        public void move(string direction) {
+            Game.Character.walk(direction);
+        }
     }
 }
