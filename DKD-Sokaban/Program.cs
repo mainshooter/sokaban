@@ -8,7 +8,9 @@ namespace DKD_Sokaban {
     class Program {
         static void Main(string[] args) {
             Controller controller = new Controller();
-            controller.Start();
+            //controller.Start();
+            controller.LoadGame(0);
+            Console.ReadLine();
         }
     }
 }

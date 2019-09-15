@@ -47,27 +47,19 @@ namespace DKD_Sokaban {
         }
 
         public Field Up {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Down {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Left {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Right {
-            get => default;
-            set {
-            }
+            get; set;
         }
     }
 }
