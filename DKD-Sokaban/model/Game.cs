@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DKD_Sokaban {
     public class Game {
-        private Character Character;
+        public Character Character { get; private set; }
         private Field startField;
         private List<List<Field>> map;
 
