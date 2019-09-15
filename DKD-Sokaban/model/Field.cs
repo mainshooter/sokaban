@@ -47,27 +47,38 @@ namespace DKD_Sokaban {
         }
 
         public Field Up {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Down {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Left {
-            get => default;
-            set {
-            }
+            get; set;
         }
 
         public Field Right {
-            get => default;
-            set {
+            get; set;
+        }
+
+        public Field GetFieldOfDirection(string direction) {
+            Field field = null;
+            switch (direction) {
+                case "up":
+                    field = Up;
+                    break;
+                case "down":
+                    field = Down;
+                    break;
+                case "left":
+                    field = Left;
+                    break;
+                case "right":
+                    field = Right;
+                    break;
             }
+            return field;
         }
     }
 }

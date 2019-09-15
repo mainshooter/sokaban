@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DKD_Sokaban {
-    public class Controller {
+
+  public class Controller {
+        private Game Game;
 
         public Controller () {
 
@@ -39,6 +41,15 @@ namespace DKD_Sokaban {
                     throw new NotImplementedException();
                     break;
             }
+        }
+
+        public void LoadGame(int index) {
+            Game = new Game();
+            Game.Parse(index);
+        }
+
+        public void move(string direction) {
+            Game.Character.walk(direction);
         }
     }
 }
