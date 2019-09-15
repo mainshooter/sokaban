@@ -12,27 +12,28 @@ namespace DKD_Sokaban {
         }
 
         public void walk(string direction) {
-            Field field = null;
-            switch (direction) {
-                case "up":
-                    field = Field.Up;
-                    break;
-                case "down":
-                    field = Field.Down;
-                    break;
-                case "left":
-                    field = Field.Left;
-                    break;
-                case "right":
-                    field = Field.Right;
-                    break;
-            }
+            Field field = Field.GetFieldOfDirection(direction);
             if (field == null) {
                 return;
             }
 
             if (!field.WalkOn) {
                 return;
+            }
+
+            if (field.Box != null) {
+                Field nextFieldOfBox = field.GetFieldOfDirection(direction);
+                if (nextFieldOfBox == null) {
+                    return;
+                } 
+                if (!nextFieldOfBox.WalkOn) {
+                    return;
+                }
+                if (nextFieldOfBox.Box != null) {
+                    return;
+                }
+                nextFieldOfBox.Box = Field.Box;
+                Field.Box = null;
             }
             Field = field;
         }
