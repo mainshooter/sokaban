@@ -21,7 +21,6 @@ namespace DKD_Sokaban {
             var lines = File.ReadAllLines(fileName);
             List<List<Field>> fields = new List<List<Field>>();
             for (var i = 0; i < lines.Length; i += 1) {
-                Console.WriteLine("run");
                 var line = lines[i];
                 List<Field> currentFields = new List<Field>();
                 for (int j = 0; j < line.Length; j++) {
@@ -83,7 +82,6 @@ namespace DKD_Sokaban {
                     }
                 }
             }
-            //// Everything is parsed
         }
     }
 }
