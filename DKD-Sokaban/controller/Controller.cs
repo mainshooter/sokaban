@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DKD_Sokaban {
     class Controller {
+        private Game Game;
 
         public Controller () {
 
@@ -13,6 +14,11 @@ namespace DKD_Sokaban {
 
         public void Start() {
 
+        }
+
+        public void LoadGame(int index) {
+            Game = new Game();
+            Game.Parse(index);
         }
     }
 }
