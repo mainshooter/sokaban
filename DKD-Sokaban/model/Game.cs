@@ -9,6 +9,7 @@ namespace DKD_Sokaban {
         public Character Character { get; private set; }
         private Field startField;
         private List<List<Field>> map;
+        private int mapIndex;
 
         public string[] maps { get; private set; }
 
@@ -16,7 +17,12 @@ namespace DKD_Sokaban {
             maps = new string[4] { "doolhof1", "doolhof2", "doolhof3", "doolhof4" };
         }
 
+        public void Reset() {
+            Parse(mapIndex);
+        }
+
         public void Parse(int index) {
+            mapIndex = index;
             string fileName = "map/" + maps[index];
             fileName += ".txt";
             var lines = File.ReadAllLines(fileName);
