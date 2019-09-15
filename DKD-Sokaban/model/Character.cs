@@ -14,16 +14,16 @@ namespace DKD_Sokaban {
         public void walk(string direction) {
             Field field = null;
             switch (direction) {
-                case 'up':
+                case "up":
                     field = Field.Up;
                     break;
-                case 'down':
+                case "down":
                     field = Field.Down;
                     break;
-                case 'left':
+                case "left":
                     field = Field.Left;
                     break;
-                case 'right':
+                case "right":
                     field = Field.Right;
                     break;
             }
