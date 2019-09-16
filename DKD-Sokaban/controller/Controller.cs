@@ -76,6 +76,8 @@ namespace DKD_Sokaban {
                 gameView.Render();
                 Game.MapCompleted();
             }
+            EndGameView endView = new EndGameView();
+            endView.ShowEndGame();
             Start();
         }
 

@@ -29,7 +29,7 @@ namespace DKD_Sokaban.view {
                         row += "@";
                     }
                     else if (!field.WalkOn) {
-                        row += "M";
+                        row += "█";
                     }
                     else if (field.Box == null && !field.NeedsToHaveBox && field.Character == null) {
                         row += ".";
