@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace DKD_Sokaban {
     interface IWalk {
-        void walk(string direction);
+        void Walk(string direction);
     }
 }

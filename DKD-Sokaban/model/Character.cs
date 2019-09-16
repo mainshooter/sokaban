@@ -5,24 +5,20 @@ using System.Text;
 
 namespace DKD_Sokaban {
     public class Character: IWalk {
-        public Field Field {
-            get => default;
-            set {
-            }
-        }
+        public Field Field { get; set; }
 
-        public void walk(string direction) {
-            Field field = Field.GetFieldOfDirection(direction);
-            if (field == null) {
+        public void Walk(string direction) {
+            Field nextField = Field.GetFieldOfDirection(direction);
+            if (nextField == null) {
                 return;
             }
 
-            if (!field.WalkOn) {
+            if (!nextField.WalkOn) {
                 return;
             }
 
-            if (field.Box != null) {
-                Field nextFieldOfBox = field.GetFieldOfDirection(direction);
+            if (nextField.Box != null) {
+                Field nextFieldOfBox = nextField.GetFieldOfDirection(direction);
                 if (nextFieldOfBox == null) {
                     return;
                 } 
@@ -32,10 +28,12 @@ namespace DKD_Sokaban {
                 if (nextFieldOfBox.Box != null) {
                     return;
                 }
-                nextFieldOfBox.Box = Field.Box;
-                Field.Box = null;
+                nextFieldOfBox.Box = nextField.Box;
+                nextField.Box = null;
             }
-            Field = field;
+            Field.Character = null;
+            nextField.Character = this;
+            Field = nextField;
         }
     }
 }

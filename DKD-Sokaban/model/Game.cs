@@ -8,17 +8,41 @@ namespace DKD_Sokaban {
     public class Game {
         public Character Character { get; private set; }
         private Field startField;
-        private List<List<Field>> map;
+        public List<List<Field>> Map { get; private set; }
         private int mapIndex;
+        public bool Play { get; private set; }
 
         public string[] maps { get; private set; }
 
         public Game() {
             maps = new string[4] { "doolhof1", "doolhof2", "doolhof3", "doolhof4" };
+            Play = false;
+        }
+
+        public void Stop() {
+            Play = false;
         }
 
         public void Reset() {
             Parse(mapIndex);
+        }
+
+        public bool MapCompleted() {
+            for (int i = 0; i < Map.Count; i++) {
+                List<Field> fieldRow = Map[i];
+                for (int j = 0; j < fieldRow.Count; j++) {
+                    Field field = fieldRow[j];
+                    if (field == null) {
+                        continue;
+                    }
+                    if (field.NeedsToHaveBox && field.Box == null) {
+                        Play = true;
+                        return Play;
+                    }
+                }
+            }
+            Play = false;
+            return Play;
         }
 
         public void Parse(int index) {
@@ -51,6 +75,7 @@ namespace DKD_Sokaban {
                             newField = new Field();
                             Character = new Character();
                             newField.Character = Character;
+                            Character.Field = newField;
                             startField = newField;
                             break;
                         case 'o':
@@ -63,7 +88,7 @@ namespace DKD_Sokaban {
                 }
                 fields.Add(currentFields);
             }
-            map = fields;
+            this.Map = fields;
             for (int i = fields.Count - 1; i >= 0; i--) {
                 var fieldRow = fields[i];
                 for (int j = fieldRow.Count - 1; j >= 0; j--) {
@@ -90,6 +115,7 @@ namespace DKD_Sokaban {
                     }
                 }
             }
+            Play = true;
         }
     }
 }

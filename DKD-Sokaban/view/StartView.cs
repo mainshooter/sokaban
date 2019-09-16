@@ -17,6 +17,7 @@ namespace DKD_Sokaban.view
 
         public void ShowStartView()
         {
+            Console.Clear();
             Console.WriteLine("+-------------------------------------+");
             Console.WriteLine("|  Welkom bij Sokoban                 |");
             Console.WriteLine("|                                     |");

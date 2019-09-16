@@ -9,7 +9,6 @@ namespace DKD_Sokaban {
         static void Main(string[] args) {
             Controller controller = new Controller();
             controller.Start();
-            Console.ReadLine();
         }
     }
 }
