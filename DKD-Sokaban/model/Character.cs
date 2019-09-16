@@ -28,8 +28,8 @@ namespace DKD_Sokaban {
                 if (nextFieldOfBox.Box != null) {
                     return;
                 }
-                nextFieldOfBox.Box = Field.Box;
-                Field.Box = null;
+                nextFieldOfBox.Box = field.Box;
+                field.Box = null;
             }
             Field.Character = null;
             field.Character = this;
