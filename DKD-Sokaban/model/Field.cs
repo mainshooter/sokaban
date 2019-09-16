@@ -15,11 +15,6 @@ namespace DKD_Sokaban {
 
         public bool NeedsToHaveBox {get; set;}
 
-        public Field() {
-            this.WalkOn = true;
-            this.NeedsToHaveBox = false;
-        }
-
         public Character Character {get;set;}
 
         public Field Up {
@@ -36,6 +31,11 @@ namespace DKD_Sokaban {
 
         public Field Right {
             get; set;
+        }
+
+        public Field() {
+            this.WalkOn = true;
+            this.NeedsToHaveBox = false;
         }
 
         public Field GetFieldOfDirection(string direction) {

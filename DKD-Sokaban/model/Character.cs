@@ -5,11 +5,7 @@ using System.Text;
 
 namespace DKD_Sokaban {
     public class Character: IWalk {
-        public Field Field {
-            get => default;
-            set {
-            }
-        }
+        public Field Field { get; set; }
 
         public void Walk(string direction) {
             Field field = Field.GetFieldOfDirection(direction);
@@ -35,6 +31,8 @@ namespace DKD_Sokaban {
                 nextFieldOfBox.Box = Field.Box;
                 Field.Box = null;
             }
+            Field.Character = null;
+            field.Character = this;
             Field = field;
         }
     }

@@ -36,12 +36,12 @@ namespace DKD_Sokaban {
                         continue;
                     }
                     if (field.NeedsToHaveBox && field.Box == null) {
-                        Play = false;
+                        Play = true;
                         return Play;
                     }
                 }
             }
-            Play = true;
+            Play = false;
             return Play;
         }
 
@@ -75,6 +75,7 @@ namespace DKD_Sokaban {
                             newField = new Field();
                             Character = new Character();
                             newField.Character = Character;
+                            Character.Field = newField;
                             startField = newField;
                             break;
                         case 'o':
