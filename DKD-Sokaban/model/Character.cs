@@ -8,17 +8,17 @@ namespace DKD_Sokaban {
         public Field Field { get; set; }
 
         public void Walk(string direction) {
-            Field field = Field.GetFieldOfDirection(direction);
-            if (field == null) {
+            Field nextField = Field.GetFieldOfDirection(direction);
+            if (nextField == null) {
                 return;
             }
 
-            if (!field.WalkOn) {
+            if (!nextField.WalkOn) {
                 return;
             }
 
-            if (field.Box != null) {
-                Field nextFieldOfBox = field.GetFieldOfDirection(direction);
+            if (nextField.Box != null) {
+                Field nextFieldOfBox = nextField.GetFieldOfDirection(direction);
                 if (nextFieldOfBox == null) {
                     return;
                 } 
@@ -28,12 +28,12 @@ namespace DKD_Sokaban {
                 if (nextFieldOfBox.Box != null) {
                     return;
                 }
-                nextFieldOfBox.Box = field.Box;
-                field.Box = null;
+                nextFieldOfBox.Box = nextField.Box;
+                nextField.Box = null;
             }
             Field.Character = null;
-            field.Character = this;
-            Field = field;
+            nextField.Character = this;
+            Field = nextField;
         }
     }
 }
