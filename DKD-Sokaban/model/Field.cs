@@ -36,7 +36,7 @@ namespace DKD_Sokaban {
         }
 
         public Field() {
-            WalkOn = true;
+            this.WalkOn = true;
             this.NeedsToHaveBox = false;
         }
 

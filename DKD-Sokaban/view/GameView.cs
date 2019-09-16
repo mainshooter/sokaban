@@ -14,10 +14,9 @@ namespace DKD_Sokaban.view {
 
         public void Render() {
             Console.Clear();
-            List<List<Field>> fields = game.Map;
-            for (int i = fields.Count - 1; i > 0; i--) {
+            for (int i = game.Map.Count - 1; i > 0; i--) {
                 string row = "";
-                List<Field> fieldRow = fields[i];
+                List<Field> fieldRow = game.Map[i];
                 for (int j = fieldRow.Count - 1; j > 0; j--) {
                     Field field = fieldRow[j];
 

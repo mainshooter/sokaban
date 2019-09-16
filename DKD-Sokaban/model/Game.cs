@@ -10,15 +10,39 @@ namespace DKD_Sokaban {
         private Field startField;
         public List<List<Field>> Map { get; private set; }
         private int mapIndex;
+        public bool Play { get; private set; }
 
         public string[] maps { get; private set; }
 
         public Game() {
             maps = new string[4] { "doolhof1", "doolhof2", "doolhof3", "doolhof4" };
+            Play = false;
+        }
+
+        public void Stop() {
+            Play = false;
         }
 
         public void Reset() {
             Parse(mapIndex);
+        }
+
+        public bool MapCompleted() {
+            for (int i = 0; i < Map.Count; i++) {
+                List<Field> fieldRow = Map[i];
+                for (int j = 0; j < fieldRow.Count; j++) {
+                    Field field = fieldRow[j];
+                    if (field == null) {
+                        continue;
+                    }
+                    if (field.NeedsToHaveBox && field.Box == null) {
+                        Play = false;
+                        return Play;
+                    }
+                }
+            }
+            Play = true;
+            return Play;
         }
 
         public void Parse(int index) {
@@ -63,7 +87,7 @@ namespace DKD_Sokaban {
                 }
                 fields.Add(currentFields);
             }
-            Map = fields;
+            this.Map = fields;
             for (int i = fields.Count - 1; i >= 0; i--) {
                 var fieldRow = fields[i];
                 for (int j = fieldRow.Count - 1; j >= 0; j--) {
@@ -90,6 +114,7 @@ namespace DKD_Sokaban {
                     }
                 }
             }
+            Play = true;
         }
     }
 }

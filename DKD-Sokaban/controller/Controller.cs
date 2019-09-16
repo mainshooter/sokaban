@@ -20,36 +20,63 @@ namespace DKD_Sokaban {
 
         public void StartViewInput(string input)
         {
+            bool canProgress = false;
             switch (input)
             {
                 case "1":
-                    throw new NotImplementedException();
+                    canProgress = true;
                     break;
                 case "2":
-                    throw new NotImplementedException();
+                    canProgress = true;
                     break;
                 case "3":
-                    throw new NotImplementedException();
+                    canProgress = true;
                     break;
                 case "4":
-                    throw new NotImplementedException();
-                    break;
-                case "s":
-                    throw new NotImplementedException();
-                    break;
-                default:
-                    throw new NotImplementedException();
+                    canProgress = true;
                     break;
             }
+            if (input == "s") {
+                return;
+            }
+            int loadIndex = Int32.Parse(input) - 1;
+            LoadGame(loadIndex);
         }
 
         public void LoadGame(int index) {
             Game = new Game();
             Game.Parse(index);
+            PlayGame();
+        }
+
+        public void PlayGame() {
+            GameView gameView = new GameView(Game);
+            while(Game.Play) {
+                var input = Console.ReadKey();
+                switch (input.Key) {
+                    case ConsoleKey.UpArrow:
+                        Move("up");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Move("down");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Move("left");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Move("right");
+                        break;
+                    case ConsoleKey.S:
+                        Game.Stop();
+                        break;
+                }
+                gameView.Render();
+                Game.MapCompleted();
+            }
         }
 
         public void Move(string direction) {
-            Game.Character.walk(direction);
+            Game.Character.Walk(direction);
         }
     }
 }
