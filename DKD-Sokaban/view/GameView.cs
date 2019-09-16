@@ -21,7 +21,11 @@ namespace DKD_Sokaban.view {
                 for (int j = 0; j < fieldRow.Count; j++) {
                     Field field = fieldRow[j];
 
-                    if (field.Character != null) {
+                    if (field == null) {
+                        row += " ";
+                    }
+
+                    else if (field.Character != null) {
                         row += "@";
                     }
                     else if (!field.WalkOn) {

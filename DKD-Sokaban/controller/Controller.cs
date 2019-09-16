@@ -66,13 +66,17 @@ namespace DKD_Sokaban {
                     case ConsoleKey.RightArrow:
                         Move("right");
                         break;
+                    case ConsoleKey.R:
+                        Game.Reset();
+                        break;
                     case ConsoleKey.S:
                         Game.Stop();
-                        break;
+                        return;
                 }
                 gameView.Render();
                 Game.MapCompleted();
             }
+            Start();
         }
 
         public void Move(string direction) {
