@@ -11,7 +11,7 @@ namespace DKD_Sokaban {
             }
         }
 
-        public void walk(string direction) {
+        public void Walk(string direction) {
             Field field = Field.GetFieldOfDirection(direction);
             if (field == null) {
                 return;

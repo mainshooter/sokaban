@@ -8,7 +8,7 @@ namespace DKD_Sokaban {
     public class Game {
         public Character Character { get; private set; }
         private Field startField;
-        private List<List<Field>> map;
+        public List<List<Field>> Map { get; private set; }
         private int mapIndex;
 
         public string[] maps { get; private set; }
@@ -63,7 +63,7 @@ namespace DKD_Sokaban {
                 }
                 fields.Add(currentFields);
             }
-            map = fields;
+            Map = fields;
             for (int i = fields.Count - 1; i >= 0; i--) {
                 var fieldRow = fields[i];
                 for (int j = fieldRow.Count - 1; j >= 0; j--) {

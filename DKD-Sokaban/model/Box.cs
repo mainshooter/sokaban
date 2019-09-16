@@ -8,7 +8,7 @@ namespace DKD_Sokaban {
         public Box() {
         }
 
-        public void walk(string direction) {
+        public void Walk(string direction) {
             throw new NotImplementedException();
         }
     }
