@@ -13,11 +13,12 @@ namespace DKD_Sokaban.view {
         }
 
         public void Render() {
+
             Console.Clear();
-            for (int i = game.Map.Count - 1; i > 0; i--) {
+            for (int i = 0; i < game.Map.Count; i++) {
                 string row = "";
                 List<Field> fieldRow = game.Map[i];
-                for (int j = fieldRow.Count - 1; j > 0; j--) {
+                for (int j = 0; j < fieldRow.Count; j++) {
                     Field field = fieldRow[j];
 
                     if (field.Character != null) {
