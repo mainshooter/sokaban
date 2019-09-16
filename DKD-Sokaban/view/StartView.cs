@@ -23,7 +23,7 @@ namespace DKD_Sokaban.view
             Console.WriteLine("|                                     |");
             Console.WriteLine("|  Gebruiksaanwijzingen               |");
             Console.WriteLine("|                                     |");
-            Console.WriteLine("|  M : muur                           |");
+            Console.WriteLine("|  █ : muur                           |");
             Console.WriteLine("|  . : vloer                          |");
             Console.WriteLine("|  o : krat                           |");
             Console.WriteLine("|  0 : krat op bestemming             |");
