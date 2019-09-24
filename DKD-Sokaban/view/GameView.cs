@@ -20,36 +20,9 @@ namespace DKD_Sokaban.view {
                 string row = "";
                 List<Field> fieldRow = game.Map[i];
                 for (int j = 0; j < fieldRow.Count; j++) {
+					// In Field moet vertellen
                     Field field = fieldRow[j];
-
-                    if (field == null) {
-                        row += " ";
-                    }
-
-                    else if (field.Character != null) {
-                        row += "@";
-                    }
-                    else if (!field.WalkOn) {
-                        row += "█";
-                    }
-					else if (field.GetType() == typeof(DamagedField) && field.BrokenField) {
-						row += ' ';
-					}
-					else if (field.GetType() == typeof(DamagedField) && field.Box == null) {
-						row += '~';
-					} 
-					else if (field.Box == null && !field.NeedsToHaveBox && field.Character == null) {
-                        row += ".";
-                    }
-                    else if (field.Box != null && !field.NeedsToHaveBox && field.WalkOn) {
-                        row += "o";
-                    }
-                    else if (field.Box != null && field.NeedsToHaveBox && field.WalkOn && field.Character == null) {
-                        row += "0";
-                    }
-                    else if (field.Box == null && field.NeedsToHaveBox && field.WalkOn && field.Character == null) {
-                        row += "x";
-                    }
+					row += field.FieldCharacter;
                 }
                 Console.WriteLine(row);
             }

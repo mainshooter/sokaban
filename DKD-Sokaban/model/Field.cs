@@ -35,6 +35,24 @@ namespace DKD_Sokaban {
 
 		public virtual bool BrokenField { get; protected set; }
 
+		public virtual string FieldCharacter {
+			get {
+				if (Character != null) {
+					return "@";
+				}
+				else if (Box != null && !NeedsToHaveBox && WalkOn) {
+					return "o";
+				}
+				else if (Box != null && NeedsToHaveBox && WalkOn && Character == null) {
+					return "0";
+				}
+				else if (Box == null && NeedsToHaveBox && WalkOn && Character == null) {
+					return "x";
+				}
+				return ".";
+			}
+		}
+
         public Field() {
             this.WalkOn = true;
             this.NeedsToHaveBox = false;

@@ -42,6 +42,23 @@ namespace DKD_Sokaban.model {
 				UsesLeft--;
 			}
 		}
+		public override string FieldCharacter {
+			get {
+				if (IsFieldBroken()) {
+					return " ";
+				}
+				if (Character != null) {
+					return "@";
+				} else if (Box != null && !NeedsToHaveBox && WalkOn) {
+					return "o";
+				} else if (Box != null && NeedsToHaveBox && WalkOn && Character == null) {
+					return "0";
+				} else if (Box == null && NeedsToHaveBox && WalkOn && Character == null) {
+					return "x";
+				}
+				return "~";
+			}
+		}
 		public DamagedField() : base() {
 			UsesLeft = 3;
 			IsFieldBroken();

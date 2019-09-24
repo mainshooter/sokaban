@@ -10,7 +10,7 @@
   <Class Name="DKD_Sokaban.Field">
     <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAEAAACAAAAAAAIAAAAACACAAAAAaAI=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAEAAACAAAAAAAICAAAACACAgAAAaAI=</HashCode>
       <FileName>model\Field.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -28,7 +28,7 @@
   <Class Name="DKD_Sokaban.Character">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAA=</HashCode>
       <FileName>model\Character.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -39,20 +39,19 @@
   <Class Name="DKD_Sokaban.Game">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqAA=</HashCode>
+      <HashCode>AIAgAAAAABAABAAAgAAAAAAAAAAAAAAAoAAAQAAAiAA=</HashCode>
       <FileName>model\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="Character" />
+      <Property Name="Character" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DKD_Sokaban.Box">
     <Position X="8.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\Box.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="DKD_Sokaban.DestinationField">
     <Position X="2.5" Y="4.5" Width="1.5" />
