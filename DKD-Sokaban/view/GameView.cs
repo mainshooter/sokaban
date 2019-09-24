@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DKD_Sokaban.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,13 @@ namespace DKD_Sokaban.view {
                     else if (!field.WalkOn) {
                         row += "█";
                     }
-                    else if (field.Box == null && !field.NeedsToHaveBox && field.Character == null) {
+					else if (field.GetType() == typeof(DamagedField) && field.BrokenField) {
+						row += ' ';
+					}
+					else if (field.GetType() == typeof(DamagedField) && field.Box == null) {
+						row += '~';
+					} 
+					else if (field.Box == null && !field.NeedsToHaveBox && field.Character == null) {
                         row += ".";
                     }
                     else if (field.Box != null && !field.NeedsToHaveBox && field.WalkOn) {

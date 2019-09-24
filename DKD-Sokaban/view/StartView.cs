@@ -31,7 +31,7 @@ namespace DKD_Sokaban.view
             Console.WriteLine("|  @ : speler                         |");
             Console.WriteLine("+-------------------------------------+");
 
-            Console.Write("Kies een doolhof (1-4), s = stop: ");
+            Console.Write("Kies een doolhof (1-6), s = stop: ");
 
             localController.StartViewInput(Console.ReadLine());
         }

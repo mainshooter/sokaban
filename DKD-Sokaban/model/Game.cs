@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DKD_Sokaban.model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace DKD_Sokaban {
         public string[] maps { get; private set; }
 
         public Game() {
-            maps = new string[4] { "doolhof1", "doolhof2", "doolhof3", "doolhof4" };
+            maps = new string[6] { "doolhof1", "doolhof2", "doolhof3", "doolhof4", "doolhof5", "doolhof6" };
             Play = false;
         }
 
@@ -83,7 +84,11 @@ namespace DKD_Sokaban {
                             Box box = new Box();
                             newField.Box = box;
                             break;
-                    }
+						case '~':
+							newField = new DamagedField();
+							break;
+
+					}
                     currentFields.Add(newField);
                 }
                 fields.Add(currentFields);

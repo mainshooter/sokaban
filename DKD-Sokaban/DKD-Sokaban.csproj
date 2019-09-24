@@ -61,6 +61,7 @@
     <Compile Include="controller\Controller.cs" />
     <Compile Include="model\Box.cs" />
     <Compile Include="model\Character.cs" />
+    <Compile Include="model\DamagedField.cs" />
     <Compile Include="model\DestinationField.cs" />
     <Compile Include="model\Field.cs" />
     <Compile Include="model\Game.cs" />
@@ -98,6 +99,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="map\doolhof4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="map\doolhof5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="map\doolhof6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

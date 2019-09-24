@@ -11,11 +11,11 @@ namespace DKD_Sokaban {
 
         public bool WalkOn { get; protected set; }
 
-        public Box Box {get; set;}
+        public virtual Box Box {get; set;}
 
         public bool NeedsToHaveBox {get; set;}
 
-        public Character Character {get;set;}
+        public virtual Character Character {get;set;}
 
         public Field Up {
             get; set;
@@ -33,9 +33,12 @@ namespace DKD_Sokaban {
             get; set;
         }
 
+		public virtual bool BrokenField { get; protected set; }
+
         public Field() {
             this.WalkOn = true;
             this.NeedsToHaveBox = false;
+			BrokenField = false;
         }
 
         public Field GetFieldOfDirection(string direction) {

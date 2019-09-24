@@ -35,6 +35,12 @@ namespace DKD_Sokaban {
                 case "4":
                     canProgress = true;
                     break;
+				case "5":
+					canProgress = true;
+					break;
+				case "6":
+					canProgress = true;
+					break;
             }
             if (input == "s") {
                 return;
