@@ -22,7 +22,12 @@ namespace DKD_Sokaban.view {
                 for (int j = 0; j < fieldRow.Count; j++) {
 					// In Field moet vertellen
                     Field field = fieldRow[j];
-					row += field.FieldCharacter;
+					if (field != null) {
+						row += field.FieldCharacter;
+					}
+					else {
+						row += " ";
+					}
                 }
                 Console.WriteLine(row);
             }
