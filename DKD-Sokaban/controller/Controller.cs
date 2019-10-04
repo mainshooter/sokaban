@@ -88,6 +88,30 @@ namespace DKD_Sokaban {
         }
 
         public void Move(string direction) {
+            Random random = new Random();
+            int numberDirection = random.Next(1, 4);
+			if (Game.Worker == null) {
+				Game.Character.Walk(direction);
+				return;
+			}
+            switch (numberDirection)
+            {
+                case 1:
+                    Game.Worker.Walk("up");
+                    break;
+                case 2:
+                    Game.Worker.Walk("down");
+                    break;
+                case 3:
+                    Game.Worker.Walk("left");
+                    break;
+                case 4:
+                    Game.Worker.Walk("right");
+                    break;
+                default:
+                    break;
+            }
+
             Game.Character.Walk(direction);
         }
     }

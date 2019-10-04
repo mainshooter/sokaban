@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DKD_Sokaban.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace DKD_Sokaban {
         public bool NeedsToHaveBox {get; set;}
 
         public virtual Character Character {get;set;}
+
+        public virtual Worker Worker { get; set; }
 
         public Field Up {
             get; set;
@@ -40,6 +43,13 @@ namespace DKD_Sokaban {
 				if (Character != null) {
 					return "@";
 				}
+                else if(Worker != null){
+                    if (Worker.IsSleeping)
+                    {
+                        return "Z";
+                    }
+                    return "$";
+                }
 				else if (Box != null && !NeedsToHaveBox && WalkOn) {
 					return "o";
 				}
