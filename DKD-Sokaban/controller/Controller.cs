@@ -90,8 +90,10 @@ namespace DKD_Sokaban {
         public void Move(string direction) {
             Random random = new Random();
             int numberDirection = random.Next(1, 4);
-            Console.WriteLine(numberDirection);
-
+			if (Game.Worker == null) {
+				Game.Character.Walk(direction);
+				return;
+			}
             switch (numberDirection)
             {
                 case 1:
