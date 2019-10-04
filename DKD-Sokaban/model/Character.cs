@@ -7,7 +7,7 @@ namespace DKD_Sokaban {
     public class Character: IWalk {
         public Field Field { get; set; }
 
-        public void Walk(string direction) {
+        public virtual void Walk(string direction) {
             Field nextField = Field.GetFieldOfDirection(direction);
             if (nextField == null) {
                 return;
@@ -37,6 +37,15 @@ namespace DKD_Sokaban {
 			if (nextField.BrokenField) {
 				return;
 			}
+
+            if (nextField.Worker != null)
+            {
+                if (nextField.Worker.IsSleeping)
+                {
+                    nextField.Worker.WakeUp();
+                }
+                return;
+            }
 
 			Field.Character = null;
             nextField.Character = this;

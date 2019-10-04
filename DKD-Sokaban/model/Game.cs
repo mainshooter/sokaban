@@ -8,6 +8,7 @@ using System.Text;
 namespace DKD_Sokaban {
     public class Game {
         public Character Character { get; private set; }
+        public Worker Worker { get; private set; }
         private Field startField;
         public List<List<Field>> Map { get; private set; }
         private int mapIndex;
@@ -83,6 +84,12 @@ namespace DKD_Sokaban {
                             newField = new Field();
                             Box box = new Box();
                             newField.Box = box;
+                            break;
+                        case '$':
+                            newField = new Field();
+                            Worker = new Worker();
+                            newField.Worker = Worker;
+                            Worker.Field = newField;
                             break;
 						case '~':
 							newField = new DamagedField();
