@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace DKD_Sokaban {
-    public class Character: IWalk {
+    public class Character {
         public Field Field { get; set; }
 
         public virtual void Walk(string direction) {

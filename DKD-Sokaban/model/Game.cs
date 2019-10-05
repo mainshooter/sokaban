@@ -14,10 +14,10 @@ namespace DKD_Sokaban {
         private int mapIndex;
         public bool Play { get; private set; }
 
-        public string[] maps { get; private set; }
+        public string[] Maps { get; private set; }
 
         public Game() {
-            maps = new string[6] { "doolhof1", "doolhof2", "doolhof3", "doolhof4", "doolhof5", "doolhof6" };
+            Maps = new string[6] { "doolhof1", "doolhof2", "doolhof3", "doolhof4", "doolhof5", "doolhof6" };
             Play = false;
         }
 
@@ -49,7 +49,7 @@ namespace DKD_Sokaban {
 
         public void Parse(int index) {
             mapIndex = index;
-            string fileName = "map/" + maps[index];
+            string fileName = "map/" + Maps[index];
             fileName += ".txt";
             var lines = File.ReadAllLines(fileName);
             List<List<Field>> fields = new List<List<Field>>();

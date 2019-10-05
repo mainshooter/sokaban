@@ -10,10 +10,6 @@ namespace DKD_Sokaban {
   public class Controller {
         private Game Game;
 
-        public Controller () {
-
-        }
-
         public void Start() {
             StartView start = new StartView(this);
         }
@@ -45,6 +41,9 @@ namespace DKD_Sokaban {
             if (input == "s") {
                 return;
             }
+			if (!canProgress) {
+				return;
+			}
             int loadIndex = Int32.Parse(input) - 1;
             LoadGame(loadIndex);
         }

@@ -10,7 +10,7 @@
   <Class Name="DKD_Sokaban.Field">
     <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAEAAACAAAAAAAICAAAACACAgAAAaAI=</HashCode>
+      <HashCode>AAAAABIAAAAAAAEAAACAAAAAAAoCAAAACACAgAAACAI=</HashCode>
       <FileName>model\Field.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -21,7 +21,7 @@
   <Class Name="DKD_Sokaban.Wall">
     <Position X="9.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,16 +34,16 @@
     <ShowAsAssociation>
       <Property Name="Field" />
     </ShowAsAssociation>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="DKD_Sokaban.Game">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAgAAAAABAABAAAgAAAAAAAAAAAAAAAoAAAQAAAiAA=</HashCode>
+      <HashCode>AAAgABAAABAABAAAgAAAAAAAAAAAAAAAoAAAQACAiAA=</HashCode>
       <FileName>model\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Character" />
+      <Property Name="Worker" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DKD_Sokaban.Box">
@@ -58,6 +58,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\DestinationField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DKD_Sokaban.model.Worker" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAEAA=</HashCode>
+      <FileName>model\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DKD_Sokaban.model.DamagedField" Collapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEBAAAAAAAAAAAoAAAAAIAAAAAAICAA=</HashCode>
+      <FileName>model\DamagedField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
