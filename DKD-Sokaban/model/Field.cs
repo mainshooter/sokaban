@@ -6,9 +6,6 @@ using System.Text;
 
 namespace DKD_Sokaban {
     public class Field {
-        public int X { get; set; }
-
-        public int Y { get; set; }
 
         public bool WalkOn { get; protected set; }
 

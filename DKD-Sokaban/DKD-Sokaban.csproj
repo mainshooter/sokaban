@@ -65,7 +65,6 @@
     <Compile Include="model\DestinationField.cs" />
     <Compile Include="model\Field.cs" />
     <Compile Include="model\Game.cs" />
-    <Compile Include="interface\IWalk.cs" />
     <Compile Include="model\Worker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
