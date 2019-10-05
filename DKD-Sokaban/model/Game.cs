@@ -39,12 +39,12 @@ namespace DKD_Sokaban {
                     }
                     if (field.NeedsToHaveBox && field.Box == null) {
                         Play = true;
-                        return Play;
+                        return false;
                     }
                 }
             }
             Play = false;
-            return Play;
+            return true;
         }
 
         public void Parse(int index) {
