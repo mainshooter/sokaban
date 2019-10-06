@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DKD_Sokaban.Program" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DKD_Sokaban.Field">
-    <Position X="6" Y="0.75" Width="1.5" />
+    <Position X="6.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABIAAAAAAAEAAACAAAAAAAoCAAAACACAgAAACAI=</HashCode>
       <FileName>model\Field.cs</FileName>
@@ -19,14 +19,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DKD_Sokaban.Wall">
-    <Position X="9.25" Y="4.25" Width="1.5" />
+    <Position X="8.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DKD_Sokaban.Character">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAA=</HashCode>
       <FileName>model\Character.cs</FileName>
@@ -47,31 +47,62 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DKD_Sokaban.Box">
-    <Position X="8.5" Y="0.75" Width="1.5" />
+    <Position X="8.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\Box.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DKD_Sokaban.DestinationField">
-    <Position X="2.5" Y="4.5" Width="1.5" />
+    <Position X="2.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>model\DestinationField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DKD_Sokaban.model.Worker" Collapsed="true">
-    <Position X="3.75" Y="2.5" Width="1.5" />
+    <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAEAA=</HashCode>
       <FileName>model\Worker.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DKD_Sokaban.model.DamagedField" Collapsed="true">
-    <Position X="6" Y="5" Width="1.5" />
+    <Position X="6.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEBAAAAAAAAAAAoAAAAAIAAAAAAICAA=</HashCode>
       <FileName>model\DamagedField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DKD_Sokaban.Controller">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAAAABAAAAAAAAAAgAAAAAACAAAAAAAAE=</HashCode>
+      <FileName>controller\Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DKD_Sokaban.view.EndGameView">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>view\EndGameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DKD_Sokaban.view.GameView">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAAA=</HashCode>
+      <FileName>view\GameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DKD_Sokaban.view.StartView">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>view\StartView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

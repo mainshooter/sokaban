@@ -9,7 +9,6 @@ namespace DKD_Sokaban {
     public class Game {
         public Character Character { get; private set; }
         public Worker Worker { get; private set; }
-        private Field startField;
         public List<List<Field>> Map { get; private set; }
         private int mapIndex;
         public bool Play { get; private set; }
@@ -78,7 +77,6 @@ namespace DKD_Sokaban {
                             Character = new Character();
                             newField.Character = Character;
                             Character.Field = newField;
-                            startField = newField;
                             break;
                         case 'o':
                             newField = new Field();
